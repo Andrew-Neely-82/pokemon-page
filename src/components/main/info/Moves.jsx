@@ -1,15 +1,17 @@
 const Moves = ({ pokemon }) => {
   return (
-    <div style={{ margin: "1rem" }}>
+    <section className="moves-section">
       <h4>Moves: </h4>
-      {pokemon.moves.map((moves, key) => {
-        return (
-          <div key={key}>
-            #{key + 1} {moves.move.name}
-          </div>
-        );
-      })}
-    </div>
+      <div className="move-wrapper">
+        {pokemon.moves.map((moves, key) => {
+          return (
+            <span key={key}>
+              #{key + 1} {moves.move.name}
+            </span>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

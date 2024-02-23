@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SearchBox from "../searchBox/SearchBox";
 import { CircularProgress } from "@mui/material";
 import { Moves, Stats, Types } from "./info/export";
@@ -57,6 +57,16 @@ const Main = () => {
     setLocations(null);
   };
 
+  const soundRef = useRef(null);
+
+  const playSound = (sound) => {
+    if (soundRef.current) {
+      soundRef.current.src = sound;
+      soundRef.current.play();
+    } else {
+      return;
+    }
+  };
   const upperCase = (obj) => obj.charAt(0).toUpperCase() + obj.slice(1);
 
   return (
@@ -66,8 +76,15 @@ const Main = () => {
       {pokemon && !loading && (
         <>
           <h3>{`#${pokemon.id} ${upperCase(pokemon.name)}`}</h3>
-          <img className="sprite front" src={pokemon.sprites.front_default} alt={`${pokemon.name}'s sprite`} title={`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}'s sprite`} />
-          <img className="sprite back" src={pokemon.sprites.back_default} alt={`${pokemon.name}'s sprite`} title={`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}'s sprite`} />
+          {pokemon.sprites.front_default && <img className="sprite front" src={pokemon.sprites.front_default} alt={`${pokemon.name}'s sprite`} title={`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}'s sprite`} />} {pokemon.sprites.front_shiny && <img className="sprite front" src={pokemon.sprites.front_shiny} alt={`${pokemon.name}'s sprite`} title={`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}'s sprite`} />}
+          {/* <img className="sprite back" src={pokemon.sprites.back_default} alt={`${pokemon.name}'s sprite`} title={`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}'s sprite`} /> */}
+          <audio ref={soundRef}>
+            {pokemon.cries.latest && <source src={pokemon.cries.latest} type="audio/mpeg" />}
+            {pokemon.cries.legacy && <source src={pokemon.cries.legacy} type="audio/mpeg" />}
+            Your browser does not support the audio element.
+          </audio>
+          {pokemon.cries.legacy && <button onClick={() => playSound(pokemon.cries.legacy)}>Play legacy cry</button>}
+          {pokemon.cries.latest && <button onClick={() => playSound(pokemon.cries.latest)}>Play latest cry</button>}
           <Types pokemon={pokemon} />
           <Stats pokemon={pokemon} />
           <Moves pokemon={pokemon} />
