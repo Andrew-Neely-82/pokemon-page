@@ -1,5 +1,7 @@
+* {
+}
+
 .App {
-  text-align: center;
 }
 
 .App-header {
@@ -8,17 +10,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1rem;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .sprite {
+    width: 20rem;
+  }
+}
+
 .search-container {
   display: flex;
+
+  &:focus-within {
+    outline: 2px solid #1976d2;
+    border-radius: 1rem;
+  }
+
+  * {
+    transition: 250ms ease all;
+  }
 
   // * hides the Mui notch
   legend {
@@ -30,8 +53,10 @@
     border-radius: 1rem 0 0 1rem;
   }
 
-  input[type="text"],
   button[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     border: none;
     border-radius: 0 1rem 1rem 0;
@@ -39,16 +64,15 @@
     cursor: pointer;
     padding: 0.25rem 0.5rem;
 
-    &:hover {
-      background: rgba(255 255 255 / 0.8);
-    }
-
     &:active {
       svg {
         width: 1rem;
         transition: 250ms ease;
       }
     }
+    // &:hover {
+    //   background: #aaaaaa;
+    // }
   }
 }
 
@@ -58,8 +82,9 @@
 }
 
 .MuiInputLabel-shrink {
+  top: -5px !important;
   border: 2px solid #1976d2;
-  padding: 0.25rem !important;
+  padding: 0.25rem 0.5rem !important;
 }
 
 .MuiAutocomplete-inputRoot {
@@ -92,9 +117,7 @@
 }
 
 .MuiInputBase-root {
-  &:focus-within {
-    outline: 2px solid #1976d2 !important;
-  }
+  border-radius: 1rem 0 0 1rem !important;
 }
 
 div[role="presentation"] {

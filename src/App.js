@@ -1,15 +1,14 @@
-import logo from "./logo.svg";
+import { Main } from "./components/export";
 import "./App.scss";
-import { SearchBox } from "./components/export";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <SearchBox />
+        <Main />
       </div>
     </div>
   );
-}
+};
 
 export default App;

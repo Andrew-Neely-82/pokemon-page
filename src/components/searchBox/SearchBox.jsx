@@ -1,30 +1,26 @@
-import { useAutocomplete } from "@mui/base/useAutocomplete";
 import SearchIcon from "@mui/icons-material/Search";
-import { useState } from "react";
+import { Button } from "@mui/material";
 import AsyncBox from "./AsyncBox";
 
-const SearchBox = ({ onClick }) => {
-  const [pokemon, setPokemon] = useState(null);
-
+const SearchBox = ({ pokemon, setPokemon }) => {
+  //
   const handleClick = () => {
     let input = document.getElementById("asynchronous-demo");
     let lowerInput = input.value.toLowerCase();
+    pokemon = lowerInput;
 
-    console.log(lowerInput);
+    if (!pokemon) return;
     setPokemon(input.value);
     const fetchPokemon = async () => {
-      const URL = `https://pokeapi.co/api/v2/pokemon/${lowerInput}`;
+      const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
       try {
-        console.log(URL);
         const res = await fetch(URL);
         const data = await res.json();
         setPokemon(data);
         console.log(data);
-        setPokemon(null);
       } catch (error) {
         console.error(error);
-        console.log(URL);
       }
     };
     fetchPokemon();
@@ -33,10 +29,10 @@ const SearchBox = ({ onClick }) => {
 
   return (
     <div className="search-container">
-      <AsyncBox />
-      <button type="submit" onClick={handleClick}>
+      <AsyncBox value={pokemon} />
+      <Button type="submit" onClick={handleClick}>
         <SearchIcon />
-      </button>
+      </Button>
     </div>
   );
 };

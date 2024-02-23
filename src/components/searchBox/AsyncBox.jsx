@@ -31,11 +31,10 @@ export default function AsyncBox({ onChange }) {
 
   useEffect(() => {
     let active = true;
-
     if (!loading) return undefined;
 
     (async () => {
-      await sleep(1e3); // For demo purposes.
+      await sleep(1e3);
 
       if (active && pokedex) {
         // Make sure pokedex data is available
