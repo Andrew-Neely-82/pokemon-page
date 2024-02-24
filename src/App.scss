@@ -2,6 +2,7 @@
 }
 
 body {
+  background-color: #234;
 }
 
 .App {
@@ -10,7 +11,6 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -206,6 +206,7 @@ div[role="presentation"] {
 .stats-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
   gap: 1rem 5rem;
   padding: 1rem;
   border: 2px solid white;
@@ -214,7 +215,7 @@ div[role="presentation"] {
   .stats-container {
     display: flex;
     justify-content: flex-start;
-    align-items: start;
+    align-items: center;
 
     .stats-text-container {
       display: flex;
@@ -227,7 +228,7 @@ div[role="presentation"] {
       }
 
       span {
-        font-size: 0.75rem;
+        font-size: 1rem;
       }
     }
   }

@@ -1,14 +1,11 @@
-import Bug from '../../images/bug.svg'
-
 import { useEffect, useRef, useState } from "react";
 import SearchBox from "../searchBox/SearchBox";
 import { CircularProgress } from "@mui/material";
-import { Moves, Stats, Types } from "./info/export";
+import { Locations, Moves, Stats, Types } from "./info/export";
 
 const Main = () => {
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [locations, setLocations] = useState(null);
 
   const sleep = (duration) => {
     return new Promise((resolve) => {
@@ -37,27 +34,6 @@ const Main = () => {
       active = false;
     };
   }, [pokemon]);
-
-  const fetchLocation = async () => {
-    const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/encounters`;
-    if (!pokemon.id) return undefined;
-
-    try {
-      const res = await fetch(URL);
-      const data = await res.json();
-      // Sort the locations alphabetically by name
-      const sortedLocations = data.sort((a, b) => {
-        return a.location_area.name.localeCompare(b.location_area.name);
-      });
-      setLocations(sortedLocations);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const clearLocations = () => {
-    setLocations(null);
-  };
 
   const soundRef = useRef(null);
 
@@ -90,34 +66,19 @@ const Main = () => {
           <Types pokemon={pokemon} />
           <Stats pokemon={pokemon} />
           <Moves pokemon={pokemon} />
-          <section className="locations-section">
-            <h3>Possible locations</h3>
-            <div>
-              <button onClick={fetchLocation}>Load Locations</button>
-              <button onClick={clearLocations}>Clear Locations</button>
-            </div>
-            {locations ? (
-              <div className="locations-wrapper">
-                <div className="locations-container">{Array.isArray(locations) && locations.map((location, index) => <span key={index}>{location.location_area.name}</span>)}</div>
-              </div>
-            ) : (
-              ""
-            )}
-          </section>
+          <Locations pokemon={pokemon} />
           <section className="games-section">
             <div className="games-wrapper">
               <h4>Games</h4>
-              <div className="games-container">{
-                pokemon.game_indices.map((pokemon, key )=> {
+              <div className="games-container">
+                {pokemon.game_indices.map((pokemon, key) => {
                   return (
                     <>
-                      <span key={key}>
-                        {pokemon.game_indices}
-                      </span>
+                      <span key={key}>{pokemon.game_indices}</span>
                     </>
-                  )
-                })
-              }</div>
+                  );
+                })}
+              </div>
             </div>
           </section>
         </>
