@@ -1,3 +1,5 @@
+import Bug from '../../images/bug.svg'
+
 import { useEffect, useRef, useState } from "react";
 import SearchBox from "../searchBox/SearchBox";
 import { CircularProgress } from "@mui/material";
@@ -88,11 +90,38 @@ const Main = () => {
           <Types pokemon={pokemon} />
           <Stats pokemon={pokemon} />
           <Moves pokemon={pokemon} />
+          <section className="locations-section">
+            <h3>Possible locations</h3>
+            <div>
+              <button onClick={fetchLocation}>Load Locations</button>
+              <button onClick={clearLocations}>Clear Locations</button>
+            </div>
+            {locations ? (
+              <div className="locations-wrapper">
+                <div className="locations-container">{Array.isArray(locations) && locations.map((location, index) => <span key={index}>{location.location_area.name}</span>)}</div>
+              </div>
+            ) : (
+              ""
+            )}
+          </section>
+          <section className="games-section">
+            <div className="games-wrapper">
+              <h4>Games</h4>
+              <div className="games-container">{
+                pokemon.game_indices.map((pokemon, key )=> {
+                  return (
+                    <>
+                      <span key={key}>
+                        {pokemon.game_indices}
+                      </span>
+                    </>
+                  )
+                })
+              }</div>
+            </div>
+          </section>
         </>
       )}
-      <button onClick={fetchLocation}>press for locations</button>
-      <button onClick={clearLocations}>Clear Locations</button>
-      <div>{Array.isArray(locations) && locations.map((location, index) => <div key={index}>{location.location_area.name}</div>)}</div>
     </div>
   );
 };

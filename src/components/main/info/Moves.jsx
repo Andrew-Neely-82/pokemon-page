@@ -6,7 +6,7 @@ const Moves = ({ pokemon }) => {
         {pokemon.moves.map((moves, key) => {
           return (
             <span key={key}>
-              #{key + 1} {moves.move.name}
+              #{key + 1} {moves.move.name.charAt(0).toUpperCase() + moves.move.name.slice(1).replace("-", " ")}
             </span>
           );
         })}
