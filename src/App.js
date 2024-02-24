@@ -1,5 +1,5 @@
 import { Main } from "./components/export";
-import "./App.scss";
+import "./styles/App.scss";
 
 const App = () => {
   return (
