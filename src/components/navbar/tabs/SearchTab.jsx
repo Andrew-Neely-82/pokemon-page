@@ -1,5 +1,5 @@
 import { TabPanel } from "@mui/lab";
-import { Main } from "../export";
+import Main from "./main/Main";
 
 const SearchTab = ({ style }) => {
   return (

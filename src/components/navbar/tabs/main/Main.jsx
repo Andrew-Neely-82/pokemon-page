@@ -1,7 +1,7 @@
 import { Audio, Locations, Moves, Stats, Types } from "./info/export";
 import { CircularProgress } from "@mui/material";
-import SearchBox from "../searchBox/SearchBox";
 import { useEffect, useState } from "react";
+import { SearchBox } from "../../../export";
 
 const Main = () => {
   const [pokemon, setPokemon] = useState(null);

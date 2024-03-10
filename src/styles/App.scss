@@ -40,7 +40,7 @@ body {
 
   &:focus-within {
     outline: 2px solid #1976d2;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
   }
 
   * {
@@ -63,7 +63,7 @@ body {
     align-items: center;
     width: 3rem;
     border: none;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 0.25rem 0.25rem 0;
     background: white;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
@@ -80,15 +80,14 @@ body {
   }
 }
 
-.MuiFormLabel-root {
-  background-color: white;
-  border-radius: 1rem;
-}
-
-.MuiInputLabel-shrink {
-  top: -5px !important;
-  border: 2px solid #1976d2;
-  padding: 0.25rem 0.5rem !important;
+.MuiFormControl-root {
+  .MuiInputLabel-shrink {
+    top: -5px !important;
+    background-color: white;
+    border: 2px solid #1976d2;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 1rem;
+  }
 }
 
 .MuiAutocomplete-inputRoot {
@@ -111,150 +110,169 @@ body {
   }
 }
 
-.MuiAutocomplete-root:focus {
-  border: 1px solid red;
-}
-
 .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
   letter-spacing: normal !important;
   line-height: normal !important;
 }
 
 .MuiInputBase-root {
-  border-radius: 1rem 0 0 1rem !important;
+  border-radius: 0.25rem 0 0 0.25rem;
 }
 
 div[role="presentation"] {
-  // border: 2px solid #1976d2;
-  border-radius: 0.5rem;
-}
+  border: 2px solid #1976d2;
+  border-radius: 0.25rem;
 
-.custom-box3 {
-  position: fixed;
-  content: "";
-  width: 555px;
-  height: 555px;
-  left: -250px;
-  top: 500px;
-  border-radius: 50%;
-  border: 2px solid white;
-
-  background: #07421e;
-  filter: blur(64px);
-}
-
-.types-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 0 3rem;
-  border: 2px solid white;
-  border-radius: 1rem;
-  padding: 1rem;
-
-  span:nth-child(2) {
-    margin-left: 1rem;
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
   }
 
-  .types-container {
-    display: flex;
-    align-items: center;
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
   }
-}
 
-.stats-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: start;
-  gap: 1rem 5rem;
-  padding: 1rem;
-  border: 2px solid white;
-  border-radius: 1rem;
-
-  .stats-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    .stats-text-container {
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
-
-      h6 {
-        margin: auto;
-        font-variant: small-caps;
-        text-decoration: underline;
-      }
-
-      span {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-.move-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  border: 2px solid white;
-  border-radius: 1rem;
-  overflow: hidden;
-
-  span {
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid white;
-  }
-}
-
-.locations-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  button {
-    min-width: 5rem;
-    width: 12rem;
-    background-color: #eee;
-    font-weight: 800;
-    border: none;
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
     border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    margin: 0.25rem;
-    cursor: pointer;
-    transition: 250ms ease all;
-
-    &:hover {
-      background: white;
-      transition: 250ms ease all;
-    }
-
-    &:active {
-      background: #ddd;
-      transition: 250ms ease all;
-      box-shadow: inset 0 0 0.25rem #00000075;
-      outline: none !important;
-    }
-
-    &:focus {
-      outline: 2px solid #1976d2;
-    }
+    cursor: ns-resize;
   }
 
-  .locations-wrapper {
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.types-section {
+  .types-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0 3rem;
     border: 2px solid white;
     border-radius: 1rem;
     padding: 1rem;
 
-    .locations-container {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      gap: 1rem;
+    span:nth-child(2) {
+      margin-left: 1rem;
+    }
 
-      span {
-        text-transform: capitalize;
-        text-transform: capitalize;
+    .types-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.stats-section {
+  .stats-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: start;
+    gap: 1rem 5rem;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+
+    .stats-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .stats-text-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+
+        h6 {
+          margin: auto;
+          font-variant: small-caps;
+          text-decoration: underline;
+        }
+
+        span {
+          font-size: 1rem;
+        }
       }
+    }
+  }
+}
+
+.moves-section {
+  .move-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    border: 2px solid white;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    span {
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid white;
+    }
+  }
+}
+
+.locations-section {
+  .locations-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    button {
+      min-width: 5rem;
+      width: 12rem;
+      background-color: #eee;
+      font-weight: 800;
+      border: none;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
+      cursor: pointer;
+      transition: 250ms ease all;
+
+      &:hover {
+        background: white;
+        transition: 250ms ease all;
+      }
+
+      &:active {
+        background: #ddd;
+        transition: 250ms ease all;
+        box-shadow: inset 0 0 0.25rem #00000075;
+        outline: none !important;
+      }
+
+      &:focus {
+        outline: 2px solid #1976d2;
+      }
+    }
+
+    .locations-wrapper {
+      border: 2px solid white;
+      border-radius: 1rem;
+      padding: 1rem;
+
+      .locations-container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 1rem;
+
+        span {
+          text-transform: capitalize;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+.games-section {
+  .games-wrapper {
+    .games-container {
     }
   }
 }
@@ -319,7 +337,7 @@ button[aria-label="share"] {
 }
 
 .MuiSvgIcon-root {
-  fill: white !important;
+  fill: white;
   filter: drop-shadow(0 0 0.5rem #00000050);
 }
 

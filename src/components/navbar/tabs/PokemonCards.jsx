@@ -1,9 +1,9 @@
+import { Card, CardContent, CardHeader, Skeleton } from "@mui/material";
+import { Cards } from "./main/info/export";
 import { TabPanel } from "@mui/lab";
-import { CircularProgress } from "@mui/material";
-import React, { Suspense } from "react";
-import { Cards } from "../main/info/export";
+import React from "react";
 
-const PokemonCards = ({ style , pokemon}) => {
+const PokemonCards = ({ style, pokemon, loading }) => {
   const generation_RANGES = {
     "Generation 1": { start: 1, end: 151 },
     "Generation 2": { start: 152, end: 251 },
@@ -17,9 +17,26 @@ const PokemonCards = ({ style , pokemon}) => {
     // Add more generations as necessary
   };
 
+  const cards = document.querySelectorAll("car-header");
+
+  const LoadingCard = () => {
+    return (
+      <Card className="card">
+        <CardHeader avatar={<Skeleton animation="wave" variant="circular" width={40} height={40} />} title={<Skeleton animation="wave" height={10} width="80%" style={{ marginBottom: 6 }} />} subheader={<Skeleton animation="wave" height={10} width="40%" />} />
+        <Skeleton animation="wave" variant="rectangular" height={200} />
+        <CardContent>
+          <React.Fragment>
+            <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
+            <Skeleton animation="wave" height={10} width="80%" />
+          </React.Fragment>
+        </CardContent>
+      </Card>
+    );
+  };
+
   return (
-    <Suspense fallback={<CircularProgress />}>
-      <TabPanel value="1" sx={{ flexDirection: "column" }}>
+    <>
+      <TabPanel value="1" style={style} sx={{ flexDirection: "column" }}>
         {Object.keys(generation_RANGES).map((generationKey) => {
           // Filter Pokémon for the current generation
           const generationPokemon = pokemon.filter((poke) => {
@@ -33,7 +50,7 @@ const PokemonCards = ({ style , pokemon}) => {
                 <h1>{generationKey}</h1>
                 <div className="cards-wrapper">
                   {generationPokemon.map((poke, index) => {
-                    return <Cards pokemon={poke} key={poke.id} />;
+                    return pokemon[pokemon.length - 1] !== 1 ? <Cards pokemon={poke} key={poke.id} loadingState={loading} /> : <LoadingCard />;
                   })}
                 </div>
               </React.Fragment>
@@ -42,8 +59,9 @@ const PokemonCards = ({ style , pokemon}) => {
           return null; // In case there are no Pokémon for this generation
         })}
       </TabPanel>
-      <div id="pokemon-sentinel" />
-    </Suspense>
+      {cards.length === 41 ? <div id="pokemon-sentinel" /> : <div id="pokemon-sentinel" />}
+    </>
   );
 };
+
 export default PokemonCards;

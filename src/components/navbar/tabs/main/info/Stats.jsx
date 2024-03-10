@@ -1,9 +1,9 @@
-import HP from "../../../images/health-normal.svg";
-import Attack from "../../../images/attack.svg";
-import Defense from "../../../images/checked-shield.svg";
-import SpecialAttack from "../../../images/punch-blast.svg";
-import SpecialDefense from "../../../images/armor-upgrade.svg";
-import Speed from "../../../images/speedometer.svg";
+import HP from "../../../../../images/health-normal.svg";
+import Attack from "../../../../../images/attack.svg";
+import Defense from "../../../../../images/checked-shield.svg";
+import SpecialAttack from "../../../../../images/punch-blast.svg";
+import SpecialDefense from "../../../../../images/armor-upgrade.svg";
+import Speed from "../../../../../images/speedometer.svg";
 
 const Stats = ({ pokemon }) => {
   //

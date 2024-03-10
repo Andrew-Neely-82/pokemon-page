@@ -1,13 +1,14 @@
-import { Card, CardHeader, CardMedia, CardContent, Zoom, Tooltip } from "@mui/material";
+import { Card, CardHeader, CardMedia, CardContent, Zoom, Tooltip, Skeleton } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { IconButton, Typography } from "@mui/material";
 import CardActionsComp from "./CardActionsComp";
 import Avatar from "@mui/material/Avatar";
-import { getTypeIcon } from "..";
+import { getTypeIcon } from "../../../index";
 import * as React from "react";
 
-export default function Cards({ pokemon, description }) {
+export default function Cards({ pokemon, description, loadingState }) {
   const [pokemonData, setPokemonData] = React.useState(null);
+  const [loading, setLoading] = React.useState(loadingState);
 
   const avatarProps = {
     sx: {
@@ -19,22 +20,36 @@ export default function Cards({ pokemon, description }) {
   };
 
   const fetchPokemonData = async (poke) => {
-    const URL = await `${poke.url}`;
-    // console.log(URL);
+    setLoading(true); // Start loading
     try {
-      const res = await fetch(URL);
+      const res = await fetch(poke.url);
       const data = await res.json();
-      // console.log(data);
       setPokemonData(data);
+      setLoading(false); // Data fetched, loading done
     } catch (error) {
       console.error(error);
+      setLoading(false); // Ensure loading is false even if there's an error
     }
-    // setPokemonData(data);
   };
 
   React.useEffect(() => {
-    fetchPokemonData(pokemon);
-  }, [pokemon]);
+    if (!loadingState) {
+      // If the parent isn't loading, fetch the card data
+      const fetchPokemonData = async () => {
+        setLoading(true); // Start loading
+        try {
+          const res = await fetch(pokemon.url);
+          const data = await res.json();
+          setPokemonData(data);
+        } catch (error) {
+          console.error(error);
+        } finally {
+          setLoading(false); // Data fetched or failed, loading done
+        }
+      };
+      fetchPokemonData();
+    }
+  }, [pokemon, loadingState]);
 
   const LEGENDARIES = {
     144: true, // Articuno

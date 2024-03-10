@@ -1,4 +1,4 @@
-import { getTypeIcon } from "./index.js";
+import { getTypeIcon } from "../../index";
 
 const Types = ({ pokemon }) => {
   const upperCase = (obj) => obj.charAt(0).toUpperCase() + obj.slice(1);

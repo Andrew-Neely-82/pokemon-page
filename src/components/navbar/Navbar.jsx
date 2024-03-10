@@ -1,18 +1,14 @@
+import { GameVersions, PokemonCards, SearchTab } from "./tabs/export";
 import React, { Suspense, useEffect, useState } from "react";
+import { TabContext, TabList } from "@mui/lab";
 import { Box, CircularProgress, Tab } from "@mui/material";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { Cards } from "../main/info/export";
-import { Main } from "../export";
-import GameVersions from "./GameVersions";
-import SearchTab from "./SearchTab";
-import PokemonCards from "./PokemonCards";
 
 export default function Navbar() {
-  const URL = `https://pokeapi.co/api/v2/pokemon?limit=41`;
+  const URL = `https://pokeapi.co/api/v2/pokemon?limit=20`;
   const [value, setValue] = React.useState("1");
   const [pokemon, setPokemon] = useState([]);
   const [nextUrl, setNextUrl] = useState(URL); // Start with the first page
-  const [, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const fetchPokemon = async () => {
     if (!nextUrl) return;
@@ -73,20 +69,6 @@ export default function Navbar() {
     },
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      console.log(entry);
-      if (entry) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  });
-
-  const hiddenElements = document.querySelectorAll(".hidden");
-  hiddenElements.forEach((el) => observer.observe(el));
-
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
       <TabContext value={value}>
@@ -99,7 +81,9 @@ export default function Navbar() {
             <Tab label="Games" value="3" {...styling.tabStyling} />
           </TabList>
         </Box>
-        <PokemonCards style={styling.panelStyling.sx} pokemon={pokemon} />
+        <Suspense fallback={<CircularProgress />}>
+          <PokemonCards style={styling.panelStyling.sx} pokemon={pokemon} loading={loading} />
+        </Suspense>
         <SearchTab style={styling.panelStyling.sx} />
         <GameVersions style={styling.panelStyling.sx} />
       </TabContext>
