@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 1rem;
@@ -33,10 +33,6 @@ body {
   align-items: center;
   width: 70rem;
   border-radius: 1rem;
-
-  .sprite {
-    width: 20rem;
-  }
 }
 
 .search-container {
@@ -315,6 +311,7 @@ button[aria-label="share"] {
   border-radius: 1rem;
   margin-inline: 1rem;
 }
+
 .content {
   box-shadow: 0 0 1rem #00000050 inset;
   background: radial-gradient(#00000025, #00000075) !important;
@@ -430,17 +427,46 @@ parent-modal-title {
   transition: all ease 5s;
 }
 
-#pokemon-sentinel {
-  position: absolute;
-  bottom: 102vh;
-  border: 2px solid yellow;
-  width: 50%;
-}
-
 .capitalize {
   text-transform: capitalize !important;
 }
 
 .br-100 {
   border-radius: 100%;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+
+  .card-header {
+    flex-direction: row-reverse;
+
+    .MuiCardHeader-content {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .MuiCardHeader-action {
+      width: fit-content;
+      margin: 0 1rem 0 0;
+    }
+  }
+}
+
+.close-icon {
+  background: red;
+  padding: 0.25rem;
+}
+
+// #pokemon-sentinel {
+//   position: absolute;
+//   bottom: 102vh;
+//   border: 2px solid yellow;
+//   width: 50%;
+// }
+
+.sprite {
+  width: 20rem;
 }

@@ -1,4 +1,4 @@
-import { Audio, Cards, Locations, Moves, Stats, Types } from "./info/export";
+import { Audio, Locations, Moves, Stats, Types } from "./info/export";
 import { CircularProgress } from "@mui/material";
 import SearchBox from "../searchBox/SearchBox";
 import { useEffect, useState } from "react";

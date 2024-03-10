@@ -18,8 +18,6 @@ export default function Cards({ pokemon, description }) {
     },
   };
 
-  // console.log(pokemonData);
-
   const fetchPokemonData = async (poke) => {
     const URL = await `${poke.url}`;
     // console.log(URL);
@@ -36,7 +34,7 @@ export default function Cards({ pokemon, description }) {
 
   React.useEffect(() => {
     fetchPokemonData(pokemon);
-  }, []);
+  }, [pokemon]);
 
   const LEGENDARIES = {
     144: true, // Articuno
@@ -54,7 +52,7 @@ export default function Cards({ pokemon, description }) {
   return (
     <>
       <Card
-        className={className}
+        className={`${className} card`}
         sx={
           {
             // maxWidth: 345,
@@ -77,8 +75,7 @@ export default function Cards({ pokemon, description }) {
               ))}
               title={pokemonData?.name}
               subheader={`# ${pokemonData?.id}`}
-              sx={{ flexDirection: "row-reverse" }}
-              className="capitalize"
+              className="card-header capitalize"
             />
             <CardMedia className={`${pokemon.name === "pikachu" ? "pikachu-bg" : ""} ${pokemonData.types.map((types) => types.type.name).join("-")}-bg`} component="img" height="200px" image={pokemonData.sprites.other["official-artwork"].front_default} alt={`${pokemonData.name}'s picture`} loading="lazy" />
             <div className="content">
