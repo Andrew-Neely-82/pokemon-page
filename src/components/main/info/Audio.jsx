@@ -24,4 +24,5 @@ const Audio = ({ pokemon }) => {
     </section>
   );
 };
+
 export default Audio;

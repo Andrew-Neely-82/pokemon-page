@@ -1,0 +1,1188 @@
+$colors: (
+  bug: #ab2,
+  dark: #434,
+  dragon: #76e,
+  electric: #fac832,
+  fairy: #e9e,
+  fire: #f42,
+  fighting: #b54,
+  flying: #89f,
+  grass: #5fbd58,
+  ghost: #66b,
+  ground: #da7c4d,
+  ice: #6cf,
+  normal: #976,
+  poison: #a59,
+  psychic: #f59,
+  rock: #ba6,
+  steel: #aab,
+  water: #39f,
+);
+
+.bug-bg {
+  background: radial-gradient(white, map-get($colors, bug));
+}
+
+.bug-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, bug));
+}
+
+.bug-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, bug));
+}
+
+.bug-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, bug));
+}
+
+.bug-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, bug));
+}
+
+.bug-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, bug));
+}
+
+.bug-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, bug));
+}
+
+.bug-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, bug));
+}
+
+.bug-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, bug));
+}
+
+.bug-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, bug));
+}
+
+.dark-bg {
+  background: radial-gradient(white, map-get($colors, dark));
+}
+
+.dark-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, dark));
+}
+
+.dark-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, dark));
+}
+
+.dark-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, dark));
+}
+
+.dark-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, dark));
+}
+
+.dark-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, dark));
+}
+
+.dark-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, dark));
+}
+
+.dark-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, dark));
+}
+
+.dark-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, dark));
+}
+
+.dark-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, dark));
+}
+
+.dragon-bg {
+  background: radial-gradient(white, map-get($colors, dragon));
+}
+
+.dragon-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, dragon));
+}
+
+.dragon-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, dragon));
+}
+
+.dragon-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, dragon));
+}
+
+.dragon-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, dragon));
+}
+
+.dragon-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, dragon));
+}
+
+.electric-bg {
+  background: radial-gradient(yellow, map-get($colors, electric));
+}
+
+.electric-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, electric));
+}
+
+.electric-ground-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, electric));
+}
+
+.electric-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, electric));
+}
+
+.electric-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, electric));
+}
+
+.electric-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, electric));
+}
+
+.fairy-bg {
+  background: radial-gradient(white, map-get($colors, fairy));
+}
+
+.fairy-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, fairy));
+}
+
+.fairy-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, fairy));
+}
+
+.fairy-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, fairy));
+}
+
+.fighting-bg {
+  background: radial-gradient(white, map-get($colors, fighting));
+}
+
+.fighting-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, fighting));
+}
+
+.fighting-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, fighting));
+}
+
+.fighting-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, fighting));
+}
+
+.fire-bg {
+  background: radial-gradient(white, map-get($colors, fire));
+}
+
+.fire-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, fire));
+}
+
+.fire-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, fire));
+}
+
+.fire-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, fire));
+}
+
+.fire-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, fire));
+}
+
+.fire-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, fire));
+}
+
+.fire-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, fire));
+}
+
+.fire-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, fire));
+}
+
+.fire-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, fire));
+}
+
+.flying-bg {
+  background: radial-gradient(white, map-get($colors, flying));
+}
+
+.flying-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, flying));
+}
+
+.flying-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, flying));
+}
+
+.flying-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, flying));
+}
+
+.flying-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, flying));
+}
+
+.flying-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, flying));
+}
+
+.ghost-bg {
+  background: radial-gradient(white, map-get($colors, ghost));
+}
+
+.ghost-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, ghost));
+}
+
+.ghost-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, ghost));
+}
+
+.ghost-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, ghost));
+}
+
+.ghost-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, ghost));
+}
+
+.ghost-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, ghost));
+}
+
+.ghost-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, ghost));
+}
+
+.grass-bg {
+  background: radial-gradient(white, map-get($colors, grass));
+}
+
+.grass-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, grass));
+}
+
+.grass-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, grass));
+}
+
+.grass-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, grass));
+}
+
+.grass-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, grass));
+}
+
+.grass-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, grass));
+}
+
+.grass-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, grass));
+}
+
+.grass-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, grass));
+}
+
+.grass-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, grass));
+}
+
+.grass-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, grass));
+}
+
+.ground-bg {
+  background: radial-gradient(white, map-get($colors, ground));
+}
+
+.ground-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, ground));
+}
+
+.ground-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, ground));
+}
+
+.ground-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, ground));
+}
+
+.ground-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, ground));
+}
+
+.ground-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, ground));
+}
+
+.ground-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, ground));
+}
+
+.ground-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, ground));
+}
+
+.ground-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, ground));
+}
+
+.ice-bg {
+  background: radial-gradient(white, map-get($colors, ice));
+}
+
+.ice-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, ice));
+}
+
+.ice-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, ice));
+}
+
+.ice-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, ice));
+}
+
+.ice-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, ice));
+}
+
+.ice-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, ice));
+}
+
+.normal-bg {
+  background: radial-gradient(white, map-get($colors, normal));
+}
+
+.normal-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, normal));
+}
+
+.normal-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, normal));
+}
+
+.normal-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, normal));
+}
+
+.normal-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, normal));
+}
+
+.normal-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, normal));
+}
+
+.pikachu-bg {
+  background: radial-gradient(yellow, #ff000090) !important;
+}
+
+.poison-bg {
+  background: radial-gradient(#b763cf90, map-get($colors, poison));
+}
+
+.poison-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, poison));
+}
+
+.poison-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, poison));
+}
+
+.poison-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, poison));
+}
+
+.poison-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, poison));
+}
+
+.poison-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, poison));
+}
+
+.poison-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, poison));
+}
+
+.poison-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, poison));
+}
+
+.psychic-bg {
+  background: radial-gradient(white, map-get($colors, psychic));
+}
+
+.psychic-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, psychic));
+}
+
+.psychic-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, psychic));
+}
+
+.psychic-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, psychic));
+}
+
+.psychic-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, psychic));
+}
+
+.psychic-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, psychic));
+}
+
+.psychic-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, psychic));
+}
+
+.psychic-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, psychic));
+}
+
+.rock-bg {
+  background: radial-gradient(white, map-get($colors, rock));
+}
+
+.rock-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, rock));
+}
+
+.rock-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, rock));
+}
+
+.rock-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, rock));
+}
+
+.rock-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, rock));
+}
+
+.rock-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, rock));
+}
+
+.rock-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, rock));
+}
+
+.rock-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, rock));
+}
+
+.rock-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, rock));
+}
+
+.rock-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, rock));
+}
+
+.steel-bg {
+  background: radial-gradient(white, map-get($colors, steel));
+}
+
+.steel-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, steel));
+}
+
+.steel-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, steel));
+}
+
+.steel-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, steel));
+}
+
+.steel-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, steel));
+}
+
+.steel-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, steel));
+}
+
+.steel-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, steel));
+}
+
+.steel-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, steel));
+}
+
+.steel-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, steel));
+}
+
+.steel-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, steel));
+}
+
+.rock-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, rock));
+}
+
+.water-bg {
+  background: radial-gradient(lightblue, #539ddf);
+}
+
+.water-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, water));
+}
+
+.water-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, water));
+}
+
+.water-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, water));
+}
+
+.water-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, water));
+}
+
+.water-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, water));
+}
+
+.water-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, water));
+}
+
+.water-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, water));
+}
+
+.water-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, water));
+}
+
+.water-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, water));
+}
+
+.water-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, water));
+}
+
+.water-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, water));
+}
+
+.water-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, water));
+}
+
+.water-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, water));
+}
+
+.water-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, water));
+}
+
+.bug-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, bug));
+}
+
+.bug-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, bug));
+}
+
+.bug-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, bug));
+}
+
+.bug-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, bug));
+}
+
+.bug-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, bug));
+}
+
+.bug-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, bug));
+}
+
+.bug-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, bug));
+}
+
+.bug-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, bug));
+}
+
+.bug-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, bug));
+}
+
+.bug-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, bug));
+}
+
+.bug-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, bug));
+}
+
+.bug-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, bug));
+}
+
+.bug-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, bug));
+}
+
+.bug-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, bug));
+}
+
+.dark-bg {
+  background: radial-gradient(white, map-get($colors, dark));
+}
+
+.dark-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, dark));
+}
+
+.dark-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, dark));
+}
+
+.dark-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, dark));
+}
+
+.dark-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, dark));
+}
+
+.dark-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, dark));
+}
+
+.dark-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, dark));
+}
+
+.dark-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, dark));
+}
+
+.dark-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, dark));
+}
+
+.dragon-bg {
+  background: radial-gradient(white, map-get($colors, dragon));
+}
+
+.dragon-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, dragon));
+}
+
+.dragon-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, dragon));
+}
+
+.dragon-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, dragon));
+}
+
+.dragon-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, dragon));
+}
+
+.dragon-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, dragon));
+}
+
+.dragon-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, dragon));
+}
+
+.dragon-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, dragon));
+}
+
+.dragon-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, dragon));
+}
+
+.electric-bg {
+  background: radial-gradient(yellow, map-get($colors, electric));
+}
+
+.electric-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, electric));
+}
+
+.electric-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, electric));
+}
+
+.electric-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, electric));
+}
+
+.electric-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, electric));
+}
+
+.electric-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, electric));
+}
+
+.electric-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, electric));
+}
+
+.electric-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, electric));
+}
+
+.electric-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, electric));
+}
+
+.fairy-bg {
+  background: radial-gradient(white, map-get($colors, fairy));
+}
+
+.fairy-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, fairy));
+}
+
+.fighting-bg {
+  background: radial-gradient(white, map-get($colors, fighting));
+}
+
+.fighting-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, fighting));
+}
+
+.fighting-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, fighting));
+}
+
+.fighting-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, fighting));
+}
+
+.fighting-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, fighting));
+}
+
+.fighting-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, fighting));
+}
+
+.fighting-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, fighting));
+}
+
+.fighting-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, fighting));
+}
+
+.fire-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, fire));
+}
+
+.fire-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, fire));
+}
+
+.fire-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, fire));
+}
+
+.fire-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, fire));
+}
+
+.fire-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, fire));
+}
+
+.fire-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, fire));
+}
+
+.fire-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, fire));
+}
+
+.fire-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, fire));
+}
+
+.fire-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, fire));
+}
+
+.ghost-bg {
+  background: radial-gradient(white, map-get($colors, ghost));
+}
+
+.ghost-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, ghost));
+}
+
+.ghost-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, ghost));
+}
+
+.ghost-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, ghost));
+}
+
+.ghost-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, ghost));
+}
+
+.ghost-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, ghost));
+}
+
+.grass-bg {
+  background: radial-gradient(white, map-get($colors, grass));
+}
+
+.grass-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, grass));
+}
+
+.grass-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, grass));
+}
+
+.grass-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, grass));
+}
+
+.grass-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, grass));
+}
+
+.grass-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, grass));
+}
+
+.grass-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, grass));
+}
+
+.grass-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, grass));
+}
+
+.grass-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, grass));
+}
+
+.grass-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, grass));
+}
+
+.grass-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, grass));
+}
+
+.ground-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, ground));
+}
+
+.ground-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, ground));
+}
+
+.ground-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, ground));
+}
+
+.ground-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, ground));
+}
+
+.ground-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, ground));
+}
+
+.ground-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, ground));
+}
+
+.ice-bg {
+  background: radial-gradient(white, map-get($colors, ice));
+}
+
+.ice-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, ice));
+}
+
+.ice-ghost-bg {
+  background: radial-gradient(map-get($colors, ghost), map-get($colors, ice));
+}
+
+.ice-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, ice));
+}
+
+.ice-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, ice));
+}
+
+.ice-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, ice));
+}
+
+.normal-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, normal));
+}
+
+.normal-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, normal));
+}
+
+.normal-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, normal));
+}
+
+.normal-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, normal));
+}
+
+.normal-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, normal));
+}
+
+.normal-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, normal));
+}
+
+.normal-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, normal));
+}
+
+.pikachu-bg {
+  background: radial-gradient(yellow, #ff000090) !important;
+}
+
+.poison-bg {
+  background: radial-gradient(#b763cf90, map-get($colors, poison));
+}
+
+.poison-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, poison));
+}
+
+.poison-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, poison));
+}
+
+.poison-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, poison));
+}
+
+.poison-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, poison));
+}
+
+.poison-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, poison));
+}
+
+.poison-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, poison));
+}
+
+.poison-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, poison));
+}
+
+.psychic-bg {
+  background: radial-gradient(white, map-get($colors, psychic));
+}
+
+.psychic-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, psychic));
+}
+
+.psychic-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, psychic));
+}
+
+.psychic-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, psychic));
+}
+
+.psychic-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, psychic));
+}
+
+.rock-bg {
+  background: radial-gradient(white, map-get($colors, rock));
+}
+
+.rock-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, rock));
+}
+
+.rock-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, rock));
+}
+
+.rock-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, rock));
+}
+
+.rock-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, rock));
+}
+
+.rock-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, rock));
+}
+
+.rock-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, rock));
+}
+
+.rock-fire-bg {
+  background: radial-gradient(map-get($colors, fire), map-get($colors, rock));
+}
+
+.rock-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, rock));
+}
+
+.rock-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, rock));
+}
+
+.rock-normal-bg {
+  background: radial-gradient(map-get($colors, normal), map-get($colors, rock));
+}
+
+.rock-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, rock));
+}
+
+.rock-steel-bg {
+  background: radial-gradient(map-get($colors, steel), map-get($colors, rock));
+}
+
+.steel-bg {
+  background: radial-gradient(white, map-get($colors, steel));
+}
+
+.steel-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, steel));
+}
+
+.steel-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, steel));
+}
+
+.steel-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, steel));
+}
+
+.steel-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, steel));
+}
+
+.steel-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, steel));
+}
+
+.steel-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, steel));
+}
+
+.steel-rock-bg {
+  background: radial-gradient(map-get($colors, rock), map-get($colors, steel));
+}
+
+.rock-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, rock));
+}
+
+.rock-water-bg {
+  background: radial-gradient(map-get($colors, water), map-get($colors, rock));
+}
+
+.water-bg {
+  background: radial-gradient(white, map-get($colors, water));
+}
+
+.water-bug-bg {
+  background: radial-gradient(map-get($colors, bug), map-get($colors, water));
+}
+
+.water-dark-bg {
+  background: radial-gradient(map-get($colors, dark), map-get($colors, water));
+}
+
+.water-dragon-bg {
+  background: radial-gradient(map-get($colors, dragon), map-get($colors, water));
+}
+
+.water-electric-bg {
+  background: radial-gradient(map-get($colors, electric), map-get($colors, water));
+}
+
+.water-grass-bg {
+  background: radial-gradient(map-get($colors, grass), map-get($colors, water));
+}
+
+.water-fairy-bg {
+  background: radial-gradient(map-get($colors, fairy), map-get($colors, water));
+}
+
+.water-fighting-bg {
+  background: radial-gradient(map-get($colors, fighting), map-get($colors, water));
+}
+
+.water-flying-bg {
+  background: radial-gradient(map-get($colors, flying), map-get($colors, water));
+}
+
+.water-ground-bg {
+  background: radial-gradient(map-get($colors, ground), map-get($colors, water));
+}
+
+.water-ice-bg {
+  background: radial-gradient(map-get($colors, ice), map-get($colors, water));
+}
+
+.water-poison-bg {
+  background: radial-gradient(map-get($colors, poison), map-get($colors, water));
+}
+
+.water-psychic-bg {
+  background: radial-gradient(map-get($colors, psychic), map-get($colors, water));
+}

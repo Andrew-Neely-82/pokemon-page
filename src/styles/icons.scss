@@ -5,7 +5,6 @@
   outline-width: 2px;
   outline-style: solid;
   padding: 0.5rem;
-  margin-right: 1rem;
 }
 
 .bug {
@@ -54,8 +53,8 @@
 }
 
 .grass {
-  background: #5fbd58;
-  box-shadow: 0 0 20px #5fbd58;
+  background: #5fbd58 !important;
+  box-shadow: 0 0 20px #5fbd58 !important;
 }
 
 .ground {
@@ -135,4 +134,8 @@
   background: radial-gradient(hsl(60, 100%, 20%), hsl(60, 100%, 30%), hsl(60, 100%, 50%));
   outline: 2px solid hsl(60, 100%, 50%);
   box-shadow: 0 0 0.125rem black inset;
+}
+
+.rock-ground {
+  background: linear-gradient(315deg, #c8b888, #da7c4d 55%, #c8b888);
 }

@@ -19,14 +19,7 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 1rem;
-
   border-radius: 0rem;
-
-  // background: linear-gradient(270deg, #ef516d 1%, rgba(239, 81, 109, 0) 100%), radial-gradient(94.51% 124.88% at 94.32% 94.43%, rgba(65, 244, 255, 0.78) 0%, rgba(131, 218, 255, 0.6552) 32.29%, rgba(99, 175, 240, 0.3978) 64.06%, rgba(43, 90, 211, 0) 100%), linear-gradient(313.04deg, #341d65 0.93%, #604aea 125.68%);
-  // background: linear-gradient(-160deg, rgb(182, 244, 146), rgb(51, 139, 147));
-
-  // opacity: 0.6;
-  // background-blend-mode: normal, normal, normal, normal, normal, normal;
 }
 
 .App-link {
@@ -136,39 +129,8 @@ body {
 }
 
 div[role="presentation"] {
-  border: 2px solid #1976d2;
+  // border: 2px solid #1976d2;
   border-radius: 0.5rem;
-}
-
-// .custom-box1,
-// .custom-box2 {
-//   /* blur-02 */
-//   position: fixed;
-//   content: "";
-//   width: 777px;
-//   height: 777px;
-//   left: 0px;
-//   bottom: -200px;
-//   border-radius: 50%;
-//   border: 2px solid white;
-
-//   // background: #07325f;
-//   // filter: blur(150px);
-// }
-
-.custom-box2 {
-  /* blur-02 */
-  position: fixed;
-  content: "";
-  width: 777px;
-  height: 777px;
-  left: 1500px;
-  top: -200px;
-  border-radius: 50%;
-  border: 2px solid white;
-
-  background: #8735b650;
-  filter: blur(256px);
 }
 
 .custom-box3 {
@@ -220,6 +182,7 @@ div[role="presentation"] {
     .stats-text-container {
       display: flex;
       flex-direction: column;
+      margin-left: 1rem;
 
       h6 {
         margin: auto;
@@ -291,8 +254,193 @@ div[role="presentation"] {
       display: grid;
       grid-template-columns: repeat(3, auto);
       gap: 1rem;
+
+      span {
+        text-transform: capitalize;
+        text-transform: capitalize;
+      }
     }
   }
 }
 
+.hidden {
+  display: none;
+}
+
+button[aria-label="share"] {
+  transform: rotateY(180deg);
+}
+
+.MuiCard-root {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 1rem !important;
+  border: 3px solid white;
+}
+
+.MuiCardHeader-root {
+  background: #1976d2;
+  box-shadow: 0 0 1rem #00000050 inset;
+
+  .MuiAvatar-root,
+  .MuiButtonBase-root {
+    filter: drop-shadow(0 0 0.25rem #00000050);
+  }
+
+  span {
+    color: white !important;
+    filter: drop-shadow(0 0 0.25rem #00000050);
+  }
+
+  .MuiCardHeader-title {
+    font-weight: 800;
+    height: 2rem;
+    line-height: 1;
+  }
+
+  .MuiCardHeader-subheader {
+    font-style: italic;
+  }
+}
+.MuiCardMedia-media {
+  object-fit: contain !important;
+  width: 100% !important;
+  box-shadow: 0 0 1rem #00000050 inset;
+}
+
+.MuiCardContent-root {
+  box-shadow: 0 0 1rem #00000050;
+  background: white;
+  border-radius: 1rem;
+  margin-inline: 1rem;
+}
+.content {
+  box-shadow: 0 0 1rem #00000050 inset;
+  background: radial-gradient(#00000025, #00000075) !important;
+  padding: 1rem 0 0 0;
+}
+
+.MuiSvgIcon-root {
+  fill: white !important;
+  filter: drop-shadow(0 0 0.5rem #00000050);
+}
+
+.MuiTabs-indicator {
+  height: 4px !important;
+}
+
 @import url("./icons.scss");
+@import url("./backgrounds.scss");
+
+.MuiCardHeader-avatar {
+  display: flex;
+  gap: 1rem;
+  margin-right: 0 !important;
+
+  img {
+    overflow: visible !important;
+    // border: white;
+  }
+}
+
+.legendary {
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn; // For animation.
+  --main-bg: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%);
+
+  border: solid 3px transparent;
+  border-radius: 1rem;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 1%, #08f, #f03 99%, transparent);
+
+  background: 
+    // padding-box clip this background in to the overall element except the border.
+    var(--main-bg) padding-box,
+    // border-box extends this background to the border space
+    var(--gradient-border) border-box,
+    // Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background.
+    var(--main-bg) border-box !important;
+
+  animation: bg-spin 3s linear infinite;
+
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.mythical {
+  --borderWidth: 3px;
+  background: #1d1f20;
+  position: relative;
+  border-radius: 1rem !important;
+}
+
+.mythical:before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) !important;
+  border-radius: calc(2 * var(--borderWidth));
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 1%, #fff, #AA 99%, transparent);
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+  opacity: 0.2;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+parent-modal-title {
+  text-transform: capitalize !important;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all ease 250ms;
+}
+
+.show {
+  opacity: 1;
+  transition: all ease 5s;
+}
+
+.hidden,
+.show {
+  transition: all ease 5s;
+}
+
+#pokemon-sentinel {
+  position: absolute;
+  bottom: 102vh;
+  border: 2px solid yellow;
+  width: 50%;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.br-100 {
+  border-radius: 100%;
+}

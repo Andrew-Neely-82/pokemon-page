@@ -1,4 +1,4 @@
-import { Audio, Locations, Moves, Stats, Types } from "./info/export";
+import { Audio, Cards, Locations, Moves, Stats, Types } from "./info/export";
 import { CircularProgress } from "@mui/material";
 import SearchBox from "../searchBox/SearchBox";
 import { useEffect, useState } from "react";
@@ -23,7 +23,7 @@ const Main = () => {
       setLoading(true);
       await sleep(1e3);
 
-      if (active && pokemon) setLoading(false)
+      if (active && pokemon) setLoading(false);
     };
 
     fetchPokemon();
@@ -38,7 +38,7 @@ const Main = () => {
   return (
     <div className="main-container">
       <SearchBox pokemon={pokemon} setPokemon={setPokemon} setLoading={setLoading} />
-      {loading && <CircularProgress thickness={33}/>}
+      {loading && <CircularProgress thickness={33} />}
       {pokemon && !loading && (
         <>
           <h3>{`#${pokemon.id} ${upperCase(pokemon.name)}`}</h3>
@@ -65,6 +65,7 @@ const Main = () => {
           </section>
         </>
       )}
+      <br />
     </div>
   );
 };

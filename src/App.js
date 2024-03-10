@@ -1,15 +1,12 @@
-import { Main } from "./components/export";
+import { Navbar } from "./components/export";
 import "./styles/App.scss";
 
 const App = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <Main />
+        <Navbar />
       </div>
-      {/* <div className="custom-box1"></div>
-      <div className="custom-box2"></div>
-      <div className="custom-box3"></div> */}
     </div>
   );
 };

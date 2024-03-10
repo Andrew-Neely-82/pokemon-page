@@ -19,4 +19,5 @@ const Types = ({ pokemon }) => {
     </section>
   );
 };
+
 export default Types;

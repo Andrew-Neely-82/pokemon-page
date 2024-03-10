@@ -39,41 +39,41 @@ export const WaterIcon = Water;
 export const getTypeIcon = (type) => {
   switch (type) {
     case "bug":
-      return <img className="icon bug" src={BugIcon} alt="BugIcon" />;
-    case "DarkIcon":
-      return <img className="icon dark" src={DarkIcon} alt="DarkIcon" />;
+      return <img className="icon bug" src={BugIcon} alt="Bug Icon" loading="lazy"/>;
+    case "dark":
+      return <img className="icon dark" src={DarkIcon} alt="Dark Icon" loading="lazy"/>;
     case "dragon":
-      return <img className="icon dragon" src={DragonIcon} alt="DragonIcon" />;
+      return <img className="icon dragon" src={DragonIcon} alt="Dragon Icon" loading="lazy"/>;
     case "electric":
-      return <img className="icon electric" src={ElectricIcon} alt="ElectricIcon" />;
+      return <img className="icon electric" src={ElectricIcon} alt="Electric Icon" loading="lazy"/>;
     case "fairy":
-      return <img className="icon fairy" src={FairyIcon} alt="FairyIcon" />;
+      return <img className="icon fairy" src={FairyIcon} alt="Fairy Icon" loading="lazy"/>;
     case "fighting":
-      return <img className="icon fighting" src={FightingIcon} alt="FightingIcon" />;
+      return <img className="icon fighting" src={FightingIcon} alt="Fighting Icon" loading="lazy"/>;
     case "fire":
-      return <img className="icon fire" src={FireIcon} alt="FireIcon" />;
+      return <img className="icon fire" src={FireIcon} alt="Fire Icon" loading="lazy"/>;
     case "flying":
-      return <img className="icon flying" src={FlyingIcon} alt="FlyingIcon" />;
+      return <img className="icon flying" src={FlyingIcon} alt="Flying Icon" loading="lazy"/>;
     case "ghost":
-      return <img className="icon ghost" src={GhostIcon} alt="GhostIcon" />;
+      return <img className="icon ghost" src={GhostIcon} alt="Ghost Icon" loading="lazy"/>;
     case "grass":
-      return <img className="icon grass" src={GrassIcon} alt="GrassIcon" />;
+      return <img className="icon grass" src={GrassIcon} alt="Grass Icon" loading="lazy"/>;
     case "ground":
-      return <img className="icon ground" src={GroundIcon} alt="GroundIcon" />;
+      return <img className="icon ground" src={GroundIcon} alt="Ground Icon" loading="lazy"/>;
     case "ice":
-      return <img className="icon ice" src={IceIcon} alt="IceIcon" />;
+      return <img className="icon ice" src={IceIcon} alt="Ice Icon" loading="lazy"/>;
     case "normal":
-      return <img className="icon normal" src={NormalIcon} alt="NormalIcon" />;
+      return <img className="icon normal" src={NormalIcon} alt="Normal Icon" loading="lazy"/>;
     case "poison":
-      return <img className="icon poison" src={PoisonIcon} alt="PoisonIcon" />;
+      return <img className="icon poison" src={PoisonIcon} alt="Poison Icon" loading="lazy"/>;
     case "psychic":
-      return <img className="icon psychic" src={PsychicIcon} alt="PsychicIcon" />;
+      return <img className="icon psychic" src={PsychicIcon} alt="Psychic Icon" loading="lazy"/>;
     case "rock":
-      return <img className="icon rock" src={RockIcon} alt="RockIcon" />;
+      return <img className="icon rock" src={RockIcon} alt="Rock Icon" loading="lazy"/>;
     case "steel":
-      return <img className="icon steel" src={SteelIcon} alt="SteelIcon" />;
+      return <img className="icon steel" src={SteelIcon} alt="Steel Icon" loading="lazy"/>;
     case "water":
-      return <img className="icon water" src={WaterIcon} alt="WaterIcon" />;
+      return <img className="icon water" src={WaterIcon} alt="Water Icon" loading="lazy"/>;
     default:
       return null;
   }
