@@ -1,0 +1,61 @@
+export const LEGENDARIES = {
+  // 144: true, // Articuno
+  // 145: true, // Zapdos
+  // 146: true, // Moltres
+  150: true,
+  243: true,
+  249: true,
+  250: true,
+  382: true,
+  383: true,
+  384: true,
+  483: true,
+  484: true,
+  487: true,
+  643: true,
+  644: true,
+  646: true,
+  716: true,
+  717: true,
+  718: true,
+  789: true,
+  790: true,
+  791: true,
+  792: true,
+  800: true,
+  888: true,
+  889: true,
+  890: true,
+  898: true,
+  1007: true,
+  1008: true,
+  1024: true,
+  // Add more legendary Pokémon IDs as needed
+};
+
+export const MYTHICALS = {
+  151: true, // Mew
+  251: true,
+  385: true,
+  386: true,
+  489: true,
+  490: true,
+  491: true,
+  492: true,
+  493: true,
+  494: true,
+  647: true,
+  648: true,
+  649: true,
+  719: true,
+  720: true,
+  721: true,
+  801: true,
+  802: true,
+  807: true,
+  808: true,
+  809: true,
+  893: true,
+  1025: true,
+  // Add more mythical Pokémon IDs as needed
+};

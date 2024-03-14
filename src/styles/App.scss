@@ -361,14 +361,11 @@ button[aria-label="share"] {
 
 .legendary {
   text-shadow: 0 1px 0 #000;
-
   --border-angle: 0turn; // For animation.
   --main-bg: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%);
-
   border: solid 3px transparent;
   border-radius: 1rem;
   --gradient-border: conic-gradient(from var(--border-angle), transparent 1%, #08f, #f03 99%, transparent);
-
   background: 
     // padding-box clip this background in to the overall element except the border.
     var(--main-bg) padding-box,
@@ -376,7 +373,6 @@ button[aria-label="share"] {
     var(--gradient-border) border-box,
     // Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background.
     var(--main-bg) border-box !important;
-
   animation: bg-spin 3s linear infinite;
 
   @keyframes bg-spin {
@@ -397,21 +393,48 @@ button[aria-label="share"] {
   background: #1d1f20;
   position: relative;
   border-radius: 1rem !important;
+
+  &:before {
+    --size: 10rem;
+    content: "";
+    position: absolute;
+    // top: calc(-1 * var(--borderWidth));
+    // left: calc(-1 * var(--borderWidth));
+    height: calc(100% * 1.5);
+    width: calc(100% * 2.25);
+    border-radius: 50%;
+    inset: -50% -50%;
+    margin: auto;
+    // width: 30rem;
+    // height: 30rem;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) !important;
+    border-radius: calc(2 * var(--borderWidth));
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 1%, #fff, #AA 99%, transparent);
+    animation: rotate-center 3s linear infinite;
+    background-size: 300% 300%;
+    opacity: 0.74;
+  }
 }
 
-.mythical:before {
-  content: "";
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) !important;
-  border-radius: calc(2 * var(--borderWidth));
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 1%, #fff, #AA 99%, transparent);
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
-  opacity: 0.2;
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes animatedgradient {
@@ -467,8 +490,40 @@ parent-modal-title {
     }
 
     .MuiCardHeader-action {
+      display: flex;
+      align-items: center;
       width: fit-content;
       margin: 0 1rem 0 0;
+      height: 100% !important;
+
+      .MuiButtonBase-root {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+        border-radius: 50% !important;
+
+        .MuiSvgIcon-root {
+          height: 2rem !important;
+          width: 2rem !important;
+          fill: white !important;
+        }
+      }
+    }
+  }
+
+  img {
+    z-index: 10;
+  }
+
+  .content {
+    z-index: 10;
+
+    .MuiCardActions-root {
+      .MuiButtonBase-root {
+        svg {
+          transform: rotateY(180deg) !important;
+          fill: white;
+        }
+      }
     }
   }
 }
@@ -488,3 +543,9 @@ parent-modal-title {
 .sprite {
   width: 20rem;
 }
+
+.MuiCardHeader-action {
+  margin: 0 !important;
+}
+
+@import url("./modal.scss");

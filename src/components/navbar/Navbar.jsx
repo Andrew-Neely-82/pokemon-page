@@ -1,7 +1,7 @@
 import { GameVersions, PokemonCards, SearchTab } from "./tabs/export";
 import React, { Suspense, useEffect, useState } from "react";
-import { TabContext, TabList } from "@mui/lab";
 import { Box, CircularProgress, Tab } from "@mui/material";
+import { TabContext, TabList } from "@mui/lab";
 
 export default function Navbar() {
   const URL = `https://pokeapi.co/api/v2/pokemon?limit=20`;
@@ -65,6 +65,8 @@ export default function Navbar() {
         display: "flex",
         justifyContent: "center",
         position: "relative",
+        maxWidth: "100rem",
+        margin: "auto",
       },
     },
   };

@@ -5,7 +5,7 @@ import ParentModal from "./modal/ParentModal";
 const CardActionsComp = ({ pokemonData }) => {
   return (
     <CardActions sx={styling.cardActions} disableSpacing>
-      <ParentModal pokemonData={pokemonData}>More Data</ParentModal>
+      <ParentModal pokemonData={pokemonData} />
       <Button sx={styling.btn}>
         <ReplyIcon />
       </Button>

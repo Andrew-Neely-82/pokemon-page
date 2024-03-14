@@ -1,0 +1,24 @@
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 20rem;
+  width: auto;
+  background: white;
+  border: 2px solid #000000;
+  box-shadow: 0 0 1rem #00000025;
+  padding: 1rem 2rem;
+
+  @media screen and (width <= 430px) {
+    max-width: calc(100% - 10rem) !important;
+  }
+}
+
+button {
+  .close-icon {
+    background: red;
+    padding: 0.25rem;
+    fill: white !important;
+  }
+}

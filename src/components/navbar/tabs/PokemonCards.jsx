@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, Skeleton } from "@mui/material";
 import { Cards } from "./main/info/export";
 import { TabPanel } from "@mui/lab";
-import React from "react";
+import React, { Suspense } from "react";
 
 const PokemonCards = ({ style, pokemon, loading }) => {
   const generation_RANGES = {
@@ -40,7 +40,7 @@ const PokemonCards = ({ style, pokemon, loading }) => {
         {Object.keys(generation_RANGES).map((generationKey) => {
           // Filter Pokémon for the current generation
           const generationPokemon = pokemon.filter((poke) => {
-            const pokeIndex = pokemon.indexOf(poke) + 1;
+            const pokeIndex = parseInt(poke.url.split("/").filter(Boolean).pop());
             return pokeIndex >= generation_RANGES[generationKey].start && pokeIndex <= generation_RANGES[generationKey].end;
           });
           // Render generation banner and its Pokémon if there are any Pokémon in the generation
