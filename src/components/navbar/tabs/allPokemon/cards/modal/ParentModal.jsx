@@ -20,7 +20,7 @@ export default function ParentModal({ pokemonData }) {
           <h2 className="parent-modal-title capitalize">{pokemonData.name}</h2>
           <p className="parent-modal-description">Parent component text</p>
           <ChildModal pokemonData={pokemonData} />
-          <button onClick={handleClose} style={buttonStyling}>
+          <button className="modal-btn" onClick={handleClose} style={buttonStyling}>
             <CloseIcon className="close-icon" />
           </button>
         </Box>

@@ -7,7 +7,6 @@ const ChildModal = ({ pokemonData }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const style = { position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: 400, bgcolor: "background.paper", border: "2px solid #000", boxShadow: 24, pt: 2, px: 4, pb: 3 };
   const buttonStyling = { position: "absolute", top: 0, right: "0", background: "transparent", border: "none", padding: 0, cursor: "pointer" };
 
   return (
@@ -21,7 +20,7 @@ const ChildModal = ({ pokemonData }) => {
             About <span className="capitalize">{pokemonData.name}</span>
           </h2>
           <p id="child-modal-description">Child component text</p>
-          <button onClick={handleClose} style={buttonStyling}>
+          <button className="modal-btn" onClick={handleClose} style={buttonStyling}>
             <CloseIcon className="close-icon" />
           </button>
         </Box>

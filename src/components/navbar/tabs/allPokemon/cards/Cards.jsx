@@ -1,11 +1,11 @@
 import { Card, CardHeader, CardMedia, CardContent, Zoom, Tooltip } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { IconButton, Typography } from "@mui/material";
-import { LEGENDARIES, MYTHICALS } from "../main/info/cards/cardsIndex";
+import { LEGENDARIES, MYTHICALS } from "./cardsIndex";
 import "react-loading-skeleton/dist/skeleton.css";
-import CardActionsComp from "../main/info/cards/CardActionsComp";
+import CardActionsComp from "./CardActionsComp";
 import Skeleton from "react-loading-skeleton";
-import { getTypeIcon } from "../index";
+import { getTypeIcon } from "../../index";
 import Avatar from "@mui/material/Avatar";
 import * as React from "react";
 

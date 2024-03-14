@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, Skeleton } from "@mui/material";
-import { Cards } from "./main/info/export";
 import { TabPanel } from "@mui/lab";
 import React, { Suspense } from "react";
+import Cards from "./cards/Cards";
 
 const PokemonCards = ({ style, pokemon, loading }) => {
   const generation_RANGES = {
